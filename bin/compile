@@ -1,0 +1,11 @@
+#!/bin/bash
+
+command -v npm >/dev/null 2>&1 || { echo >&2 "npm is not installed. Skipping."; exit 0; }
+
+cd $1/client
+
+echo "Installing npm modules..."
+npm install
+
+echo "Building React app..."
+npm run build
