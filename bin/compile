@@ -2,10 +2,12 @@
 
 command -v npm >/dev/null 2>&1 || { echo >&2 "npm is not installed. Skipping."; exit 0; }
 
+npm i -g yarn@0.16
+
 cd $1/client
 
 echo "Installing npm modules..."
-npm install
+yarn install
 
 echo "Building React app..."
-npm run build
+yarn run build
